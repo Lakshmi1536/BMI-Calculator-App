@@ -16,8 +16,6 @@ def savefile():
         filewritercsv.writerow([username,userage,userheight,userweight,userbmi,usercategory])
 # Calculate BMI based on weight (kg) and height (m)
 
-def clear_text_input():
-    my_text.delete("1.0","end")
 def calculate_bmi():
     try:
         weight_kg = float(userweighttxt.get())
@@ -128,8 +126,5 @@ chart_button.grid(row=3, column=2,padx=10,pady=10)
 
 save_button=tk.Button(userinputframe,text='Save',command=savefile)
 save_button.grid(row=3,column=3,padx=10,pady=10)
-
-clear_button = tk.Button(window, text="Clear", command=clear_text_input)
-clear_button.pack()
 
 window.mainloop()
